@@ -1,5 +1,5 @@
 <div class="container">
-<div class="row clearfix">
+    <div class="row clearfix">
     <div class="col-md-12 column">
         <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
@@ -79,222 +79,21 @@
         </nav>
     </div>
 </div>
-<div class="row clearfix">
-    <div class="col-md-4 column">
-        <img alt="140x140" src="http://lorempixel.com/140/140/">
-    </div>
-    <div class="col-md-4 column">
-        <h3>
-            h3. Lorem ipsum dolor sit amet.
-        </h3>
-    </div>
-    <div class="col-md-4 column">
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-md-6 column">
-        <address><strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> <abbr
-                title="Phone">P:</abbr> (123) 456-7890
-        </address>
-    </div>
-    <div class="col-md-6 column">
-        <address><strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> <abbr
-                title="Phone">P:</abbr> (123) 456-7890
-        </address>
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-md-12 column">
-        <dl class="dl-horizontal">
-            <dt>
-                Description lists
-            </dt>
-            <dd>
-                A description list is perfect for defining terms.
-            </dd>
-            <dt>
-                Euismod
-            </dt>
-            <dd>
-                Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-            </dd>
-            <dd>
-                Donec id elit non mi porta gravida at eget metus.
-            </dd>
-            <dt>
-                Malesuada porta
-            </dt>
-            <dd>
-                Etiam porta sem malesuada magna mollis euismod.
-            </dd>
-            <dt>
-                Felis euismod semper eget lacinia
-            </dt>
-            <dd>
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-                amet risus.
-            </dd>
-        </dl>
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-md-12 column">
-        <table class="table table-condensed">
-            <thead>
-            <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    Product
-                </th>
-                <th>
-                    Payment Taken
-                </th>
-                <th>
-                    Status
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    TB - Monthly
-                </td>
-                <td>
-                    01/04/2012
-                </td>
-                <td>
-                    Default
-                </td>
-            </tr>
-            <tr class="active">
-                <td>
-                    1
-                </td>
-                <td>
-                    TB - Monthly
-                </td>
-                <td>
-                    01/04/2012
-                </td>
-                <td>
-                    Approved
-                </td>
-            </tr>
-            <tr class="success">
-                <td>
-                    2
-                </td>
-                <td>
-                    TB - Monthly
-                </td>
-                <td>
-                    02/04/2012
-                </td>
-                <td>
-                    Declined
-                </td>
-            </tr>
-            <tr class="warning">
-                <td>
-                    3
-                </td>
-                <td>
-                    TB - Monthly
-                </td>
-                <td>
-                    03/04/2012
-                </td>
-                <td>
-                    Pending
-                </td>
-            </tr>
-            <tr class="danger">
-                <td>
-                    4
-                </td>
-                <td>
-                    TB - Monthly
-                </td>
-                <td>
-                    04/04/2012
-                </td>
-                <td>
-                    Call in to confirm
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-md-8 column">
-        <form role="form">
-            <div class="form-group">
-                <label for="exampleInput1">Input 1</label><input type="input1" class="form-control"
-                                                                            id="exampleInputEmail1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label><input type="password" class="form-control"
-                                                                          id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile">
 
-                <p class="help-block">
-                    Example block-level help text here.
-                </p>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox"> Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+    <div class="container" ng-controller="DemoController">
+        <div class="row clearfix">
+
+            <form name="demoForm" novalidate>
+                Username:
+                <input type="text" name="username" ng-model="username" username-validator ng-required="true" />
+                <span ng-show="demoForm.username.$pending">Checking Availability . . .</span>
+                <div class="messages" ng-messages="demoForm.username.$error" ng-if="demoForm.username.$touched || demoForm.$submitted">
+                    <div class="error-message" ng-message="required">Username is required.</div>
+                    <div class="error-message" ng-message="username">Username must contain only letters and numbers.</div>
+                    <div class="error-message" ng-message="usernameAvailability">Username has been taken</div>
+                </div>
+                <div><input type="submit" value="Submit" /></div>
+            </form>
+        </div>
     </div>
-    <div class="col-md-4 column">
-        <dl class="dl-horizontal">
-            <dt>
-                Description lists
-            </dt>
-            <dd>
-                A description list is perfect for defining terms.
-            </dd>
-            <dt>
-                Euismod
-            </dt>
-            <dd>
-                Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
-            </dd>
-            <dd>
-                Donec id elit non mi porta gravida at eget metus.
-            </dd>
-            <dt>
-                Malesuada porta
-            </dt>
-            <dd>
-                Etiam porta sem malesuada magna mollis euismod.
-            </dd>
-            <dt>
-                Felis euismod semper eget lacinia
-            </dt>
-            <dd>
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-                amet risus.
-            </dd>
-        </dl>
-    </div>
-</div>
-<div class="row clearfix">
-    <div class="col-md-4 column">
-    </div>
-    <div class="col-md-4 column">
-        <button type="button" class="btn btn-default">Default</button>
-    </div>
-    <div class="col-md-4 column">
-    </div>
-</div>
 </div>
