@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('typescriptdemo')
+angular.module('zwebapp')
   .controller('MainCtrl', function ($scope) {
   });

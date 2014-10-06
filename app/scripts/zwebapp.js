@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('typescriptdemo', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
+angular.module('zwebapp', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
