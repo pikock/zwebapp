@@ -6,6 +6,10 @@
     <file url="file://$PROJECT_DIR$/app/scripts/main/main-ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/scripts/zwebapp.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/styles/print.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/styles/vendor.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pom.xml" charset="UTF-8" />
   </component>
 </project>
 
