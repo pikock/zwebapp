@@ -28,7 +28,22 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+
+
+    <div class="container">
+      <div class="row clearfix">
+            <div class="col-xs-12 column">
+              <div ng-view></div>
+
+
+              
+            </div>
+        </div>
+    </div>
+    
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -56,7 +71,9 @@
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/zwebapp.js"></script>
     <script src="scripts/main/main-ctrl.js"></script>
+    <script src="scripts/services/utilities.js"></script>
 
+    <script src="bower_components/cldrjs/dist/cldr.js"></script>
     <!-- inject:partials -->
     <!-- angular templates will be automaticaly converted in js and inserted here -->
     <!-- endinject -->

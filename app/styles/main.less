@@ -12,3 +12,41 @@
     width: 50px;
   }
 }
+
+body{
+  background-color: #222;
+}
+
+#bigTotal{
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.invoice{
+  margin: 40px 50px;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 2px;
+  
+  .itemsDescription{
+    min-height: 400px;
+  }
+  
+  .form-control, input{
+    box-shadow: none;
+    padding-left: 0;
+
+    &.smaller{
+      width: inherit;
+      display: inline-block;
+      min-width: 160px;
+    }
+  }
+  .trSpacer{
+    height: 120px;
+  }
+
+  .table-items-description{
+    margin: 40px 0;
+  }
+}
